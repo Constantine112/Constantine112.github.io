@@ -94,7 +94,7 @@
 <meta property="og:image" content="http://i4.bvimg.com/635164/42420cb30f1d7452.png">
 <meta property="og:image" content="http://i1.bvimg.com/635164/c2ccf1653b52cbd9.png">
 <meta property="og:image" content="http://i1.bvimg.com/635164/01d87a0fcc5d20f1.png">
-<meta property="og:updated_time" content="2018-03-08T01:17:52.419Z">
+<meta property="og:updated_time" content="2018-03-08T01:41:40.377Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用github与hexo建一个博客">
 <meta name="twitter:description" content="github+hexo建博客">
@@ -357,7 +357,6 @@
 <li>推送网站</li>
 <li>发布文章</li>
 <li>个性化设置</li>
-<li>其它</li>
 </ul>
 <h4 id="github创建属于自己的仓库"><a href="#github创建属于自己的仓库" class="headerlink" title="github创建属于自己的仓库"></a>github创建属于自己的仓库</h4><p>登录github，如果没有账户需要自己注册，点击GitHub中的New repository创建新仓库，仓库名应该为：<strong>用户名</strong>.<a href="http://link.zhihu.com/?target=http%3A//github.io" target="_blank" rel="noopener">http://github.io</a>这个<strong>用户名</strong>使用你的GitHub帐号名称代替，这是固定写法。</p>
 <h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><p>什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用Git同步到GitHub上。如果想要了解Git的细节，参看<a href="http://link.zhihu.com/?target=http%3A//weibo.com/liaoxuefeng" target="_blank" rel="noopener">廖雪峰</a>老师的Git教程。而git则能从官网下载：<a href="http://link.zhihu.com/?target=https%3A//git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a> 。具体在安装之后的初始化可以查看廖雪峰老师的git教程，里面有详细介绍。</p>
@@ -382,7 +381,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>这时，我们分别输入三条命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="http://link.zhihu.com/?target=http%3A//xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a> (知乎排版可能会出现”http://“字样，参考下图) 比如我的xxxx就是我的GitHub用户名：<a href="https://constantine112.github.io/" target="_blank" rel="noopener">https://constantine112.github.io/</a></p>
+<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="http://xxxx.github.io" target="_blank" rel="noopener">http://xxxx.github.io</a>  比如我的xxxx就是我的GitHub用户名：<a href="https://constantine112.github.io/" target="_blank" rel="noopener">https://constantine112.github.io/</a></p>
+<h4 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h4><p>我们开始正式发布上线博客文章，在命令行中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;博客名字&quot;</span><br></pre></td></tr></table></figure>
+<p>我们会发现在blog根目录下的source文件夹中的_post文件夹中多了一个博客名字.md 文件，使用Markdown编辑器打开，就可以开始你的个人博客之旅了.</p>
+<h4 id="个性化设置"><a href="#个性化设置" class="headerlink" title="个性化设置"></a>个性化设置</h4><p>hexo的个人设置有很多，从主体的设置到音乐播放器的添加等等，有很多，大家可以去<a href="https://hexo.io/themes/" target="_blank" rel="noopener">官网</a>看看，每个主体都有属于自己的一些配置项，大家可以根据提示进行修改，我使用的是nexT主体，nexT有专门的一个网站教你们配置<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">http://theme-next.iissnan.com/getting-started.html</a>大家可以去看下。</p>
 
       
     </div>
@@ -413,15 +416,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/07/hello-world/" rel="next" title="hexo的使用">
+                <i class="fa fa-chevron-left"></i> hexo的使用
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/07/hello-world/" rel="prev" title="hexo的使用">
-                hexo的使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -548,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用github与hexo建一个博客"><span class="nav-number">1.</span> <span class="nav-text">使用github与hexo建一个博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言："><span class="nav-number">1.1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是hexo"><span class="nav-number">1.2.</span> <span class="nav-text">什么是hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建步骤"><span class="nav-number">1.2.1.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#github创建属于自己的仓库"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">github创建属于自己的仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送网站"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">推送网站</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用github与hexo建一个博客"><span class="nav-number">1.</span> <span class="nav-text">使用github与hexo建一个博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言："><span class="nav-number">1.1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是hexo"><span class="nav-number">1.2.</span> <span class="nav-text">什么是hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建步骤"><span class="nav-number">1.2.1.</span> <span class="nav-text">搭建步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#github创建属于自己的仓库"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">github创建属于自己的仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装git"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.1.4.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送网站"><span class="nav-number">1.2.1.5.</span> <span class="nav-text">推送网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发布文章"><span class="nav-number">1.2.1.6.</span> <span class="nav-text">发布文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#个性化设置"><span class="nav-number">1.2.1.7.</span> <span class="nav-text">个性化设置</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

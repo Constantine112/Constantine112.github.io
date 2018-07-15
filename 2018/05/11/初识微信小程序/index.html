@@ -90,7 +90,7 @@
 <meta property="og:image" content="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx1.png">
 <meta property="og:image" content="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx4.png">
 <meta property="og:image" content="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx5.png">
-<meta property="og:updated_time" content="2018-05-11T13:51:26.143Z">
+<meta property="og:updated_time" content="2018-07-14T09:01:51.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识微信小程序">
 <meta name="twitter:description" content="微信小程序的教程">
@@ -344,22 +344,36 @@
 <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><ol>
 <li><p>使用微信小程序开发需要使用微信开发一套工具，那就是<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html?t=2018510" target="_blank" rel="noopener">微信web开发工具</a>,这个开发工具专门用于微信小程序的开发。</p>
 </li>
-<li><p>申请一个微信小程序开发账号，<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1" target="_blank" rel="noopener">注册地址</a>,在这个地址进行注册，注册完进去之后</p>
+<li><p>申请一个微信小程序开发账号，<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1" target="_blank" rel="noopener">注册地址</a>,在这个地址进行注册，注册完进去之后，拿到开发的关键东西appId</p>
 <p><img src="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx1.png" alt="Markdown"></p>
-<p>在这，你就能拿到开发的关键东西appId，通过这个，你就能去创建一个项目了</p>
+<p>​</p>
 </li>
 </ol>
-<p>m</p>
-<p>在这里提醒一下，可以选择使用普通模板而不是nodejs模板，点击穿件，就可以在里面写代码啦，在这里一开始，你们要做的事情就是分文件夹</p>
+<h2 id="其余细节"><a href="#其余细节" class="headerlink" title="其余细节"></a>其余细节</h2><ol>
+<li>在这里提醒一下，可以选择使用普通模板而不是nodejs模板，点击穿件，就可以在里面写代码啦，在这里一开始，你们要做的事情就是分文件夹</li>
+</ol>
 <p><img src="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx4.png" alt="Markdown"></p>
-<p>在这，你们就很明显的看出来，其实这是我比较喜欢的分法，大家也可以按照习惯来，这样子分的好处就是能清楚的看到哪些在什么的地方，一般请求我会写到一个额外的函数里面，需要的时候再引用，注意一开始的需要配置app.json那个文件，这个文件就相当于webpack中的入口的文件，相当于在这个文件中注册会在这个小程序中用到的页面，如果在这个文件里面没有注册，但是你却想跳转，这时候会报错，所以大家要注册，地址要正确，主要是没有后缀,看下列的代码就知道了。在pages中进行注册页面，而window的作用就是标题，可以理解为html页面的title，会在页面的顶部显示</p>
+<ol>
+<li>你们就很明显的看出来，其实这是我比较喜欢的分法，大家也可以按照习惯来，这样子分的好处就是能清楚的看到哪些在什么的地方，一般请求我会写到一个额外的函数里面，需要的时候再引用，注意一开始的需要配置app.json那个文件，这个文件就相当于webpack中的入口的文件，相当于在这个文件中注册会在这个小程序中用到的页面，如果在这个文件里面没有注册，但是你却想跳转，这时候会报错，所以大家要注册，地址要正确，主要是没有后缀,看下列的代码就知道了。在pages中进行注册页面，而window的作用就是标题，可以理解为html页面的title，会在页面的顶部显示</li>
+</ol>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>:[</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/log/log"</span>,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>:&#123;</span><br><span class="line">    <span class="attr">"backgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>: <span class="string">"light"</span>,</span><br><span class="line">    <span class="attr">"navigationBarBackgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTitleText"</span>: <span class="string">"登录助手"</span>,</span><br><span class="line">    <span class="attr">"navigationBarTextStyle"</span>: <span class="string">"black"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"tabBar"</span>: &#123;</span><br><span class="line">        <span class="attr">"list"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">                <span class="attr">"text"</span>: <span class="string">"仓库"</span>,</span><br><span class="line">                <span class="attr">"iconPath"</span>: <span class="string">"sources/image/Warehouse_normal.png"</span>,</span><br><span class="line">                <span class="attr">"selectedIconPath"</span>: <span class="string">"sources/image/Warehouse_selected.png"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"pagePath"</span>: <span class="string">"pages/data/data"</span>,</span><br><span class="line">                <span class="attr">"text"</span>: <span class="string">"订单"</span>,</span><br><span class="line">                <span class="attr">"iconPath"</span>: <span class="string">"sources/image/Order_normal.png"</span>,</span><br><span class="line">                <span class="attr">"selectedIconPath"</span>: <span class="string">"sources/image/Order_selected.png"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"selectedColor"</span>: <span class="string">"#2bd356"</span>,</span><br><span class="line">        <span class="attr">"position"</span>: <span class="string">"buttom"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这个红色框框框住的就是window的设置地方，而tabBar就会写在最底下，类似与淘宝网下面的那部分，能够多个页面进行跳转。</p>
+<ol>
+<li>这个红色框框框住的就是window的设置地方，而tabBar就会写在最底下，类似与淘宝网下面的那部分，能够多个页面进行跳转。</li>
+</ol>
 <p><img src="https://qwe369399139.oss-cn-shenzhen.aliyuncs.com/wx5.png" alt="Markdown"></p>
-<p>说了这么多，然后就说说wxml，这个格式的页面就是微信自主开发一种格式，里面用到最多的是view标签，这个标签会很有用，而block标签页很有用，而wxss和css也很相似，但是wxss最大的不同是，可以使用rpx，这是什么呢，rpx是微信开发的，也可以说是适用手机屏幕的一款计量单位，一个手机的宽度是750rpx无论是什么屏幕都不会改变，所以，这就很方便我们的使用了。</p>
+<ol>
+<li>说了这么多，然后就说说wxml，这个格式的页面就是微信自主开发一种格式，里面用到最多的是view标签，这个标签会很有用，而block标签页很有用，而wxss和css也很相似，但是wxss最大的不同是，可以使用rpx，这是什么呢，rpx是微信开发的，也可以说是适用手机屏幕的一款计量单位，一个手机的宽度是750rpx无论是什么屏幕都不会改变，所以，这就很方便我们的使用了。</li>
+</ol>
 <p>js的话其实就是和vue差不多，学过vue的很容易上手，但是唯一的区别就是，修改data的时候需要使用this.setData（{option}）这样子修改</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">page(&#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    index: <span class="number">1</span></span><br><span class="line">  &#125;,</span><br><span class="line">  changgeIndex: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.setData(&#123;</span><br><span class="line">		index: <span class="number">2</span></span><br><span class="line">	&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>这样子，就可以修改了数值。然后数据的各个页面进行传值，那么我觉得比较好的就是在app.js文件的globalData里面设置，这样子，需要的时候可以直接获取，也不会牵扯到页面上。其实你们也可以引用组建，这个需要你们利用import就好。而想绑定事件需要在wxml中用到bindtap属性，微信小程序就说到这了。</p>
+<h2 id="开发时可能需要的问题"><a href="#开发时可能需要的问题" class="headerlink" title="开发时可能需要的问题"></a>开发时可能需要的问题</h2><ol>
+<li>在初始化的时候对多个接口进行请求，单手请求需要有先后顺序，</li>
+</ol>
+<p>解决方法：使用promise对其编程异步方式，一旦请求成功再使用使用其他请求</p>
+<ol>
+<li>制作右滑删除的时候需要利用autoflow：hidden属性，一般tounch属性对应的是你所按的那个dom节点，所以这个需要注意</li>
+</ol>
 <p>如果有疑问可以看看微信小程序的<a href="https://developers.weixin.qq.com/miniprogram/dev/quickstart/basic/getting-started.html" target="_blank" rel="noopener">文档</a>,文档其实讲的很详细</p>
 <p>在下不才，如果有什么问题可联系我的邮箱<a href="mailto:768131566@qq.com" target="_blank" rel="noopener">768131566@qq.com</a></p>
 
@@ -527,7 +541,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">1.</span> <span class="nav-text">如何使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">1.</span> <span class="nav-text">如何使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其余细节"><span class="nav-number">2.</span> <span class="nav-text">其余细节</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发时可能需要的问题"><span class="nav-number">3.</span> <span class="nav-text">开发时可能需要的问题</span></a></li></ol></div>
             
 
           </div>
